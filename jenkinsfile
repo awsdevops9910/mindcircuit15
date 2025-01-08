@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Code') {
+            steps {
+                echo 'Cloning the code from github'
+				git branch: 'main', url: 'https://github.com/awsdevops9910/mindcircuit15.git'
+            }
+        }
+		
+		stage('Build') {
+            steps {
+                echo 'Building artifact using MAven'
+				sh 'mvn clean install'
+            }
+        }
+		
+		stage('Deploy') {
+            steps {
+                echo 'Deploying to Tomcat'
+				deploy adapters: [tomcat9(credentialsId: 'MC-app-credentials', path: '', url: 'http://52.201.215.59:8080/')], contextPath: 'MC-AMEX', onFailure: false, war: '**/*.war'
+            }
+        }
+    }
+}
