@@ -250,8 +250,8 @@ function __doPostBack(eventTarget, eventArgument) {
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D93AA332" />
 	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
 </div>
-        <div class="main"> <img src="images/Amex LOGO.png" alt="American Express" id="wordmark" />
-          <h2>Guests & Partners</h2>
+        <div class="main"> <img src="images/Amex LOGO.png" alt="Mayo" id="wordmark" />
+          <h2>Hola People</h2>
           <table border="0" class="grayBlock">
             <tr>
               <td width="245" valign="middle" id="username">
