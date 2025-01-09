@@ -4,25 +4,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>mindcircuitbatch14</artifactId>
+    <artifactId>mindcircuitbatch15</artifactId>
     <version>8.3.0</version>
     <packaging>war</packaging>
 
-	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://3.83.18.215:9000/</sonar.host.url>
-
-	</properties>
 
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>NexusRepo</id>
-		    <url>http://ec2-44-202-247-118.compute-1.amazonaws.com:8081/repository/batch14-repo-snapshots/</url>
+		    <url>http://3.80.222.137:8081/repository/b15-Snapshot-Repo/</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>NexusRepo</id>
-		    <url>http://ec2-44-202-247-118.compute-1.amazonaws.com:8081/repository/batch14-repo-release/</url>
+		    <url>http://3.80.222.137:8081/repository/b15-Release-Repo/</url>
 		</repository>
   	</distributionManagement>
 
