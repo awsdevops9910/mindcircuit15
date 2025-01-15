@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools{
+     maven 'maven_3.9.9'
+      }
+
     stages {
         stage('Cloning the Code') {
             steps {
@@ -13,6 +17,15 @@ pipeline {
             steps {
                 echo 'Building artifact using MAven'
 				sh 'mvn clean install'
+            }
+        }
+
+                stage('SONARQUBE ANALYSIS') {
+            steps {
+                echo 'SONARQUBE ANALYSIS'
+				sh ''' mvn sonar:sonar \
+                        -Dsonar.host.url=http://3.84.186.156:8099/ \
+                        -Dsonar.login=squ_9b92f8f0993316e2af9d2f921b5858676abc2fc1'''
             }
         }
 		
